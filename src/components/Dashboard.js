@@ -128,8 +128,7 @@ export default function Dashboard() {
  const events =async ()=> {
    const Provider = new ethers.providers.InfuraProvider('ropsten')
    
-   const Wallet = new ethers.Wallet('11a6606b9613acb504cd7c202ea175be486af1df3b8029a90ad923ed301ab9e6',Provider)
-   const usdContract  = new ethers.Contract('0xC0972d8A369b27Fe52aD88A98FcBA786884D13e4',token.output.abi ,Wallet)
+   const usdContract  = new ethers.Contract('0x8029fAE2dC8C491D7496b1Fb78fB365C4eE90A55',token.output.abi ,Provider)
    console.log(usdContract)
 
    const total =  ethers.utils.formatEther(await usdContract.totalSupply())

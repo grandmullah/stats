@@ -170,8 +170,7 @@ export default function Registered({ onAddressChanged }) {
   const events =async ()=> {
     const Provider = new ethers.providers.InfuraProvider('ropsten')
     
-    const Wallet = new ethers.Wallet('11a6606b9613acb504cd7c202ea175be486af1df3b8029a90ad923ed301ab9e6',Provider)
-    const contract = new ethers.Contract('0x4BFfA6a35aF716e940e9a7D1B29b44cAE9578e8b',ens.output.abi,Wallet)
+    const contract = new ethers.Contract('0x4BFfA6a35aF716e940e9a7D1B29b44cAE9578e8b',ens.output.abi,Provider)
    
 
     const  his = await  contract.getUsers()
